@@ -36,7 +36,7 @@ A beginner-friendly prototype for a campus lost-and-found system. It compares lo
 - **Scikit-learn:** `TfidfVectorizer` converts text into numerical vectors; `cosine_similarity` compares those vectors.
 - **Streamlit:** Creates the interactive web app.
 
-## Explain the ML approach simply
+## the ML approach
 
 1. Each report has an item name, category, description, and location.
 2. `make_text()` combines those fields into one text string.
@@ -44,21 +44,13 @@ A beginner-friendly prototype for a campus lost-and-found system. It compares lo
 4. `cosine_similarity` compares the selected report with every report of the opposite type.
 5. The scores are sorted from highest to lowest, and the top three are displayed.
 
-## Important limitations (be honest about these)
+## Important limitations 
 
 - This is a prototype, not a production campus system.
 - The sample data is illustrative.
 - TF-IDF compares words, not image appearance or true meaning. It may miss matches when two descriptions use very different words.
 - A high similarity score is not proof of ownership. A person should verify the item before returning it.
 - Reports are stored in the app's session while it is running; this prototype does not use a permanent database or user login.
-
-## Demo idea for the interview
-
-1. Open **Find matches** and choose the sample lost black water bottle.
-2. Show the found black steel bottle appearing as a likely match.
-3. Go to **Add a report** and add a new lost item, for example: "red umbrella with curved wooden handle", location "auditorium".
-4. Add a found report with a similar description, such as: "maroon umbrella with a brown curved handle", location "auditorium entrance".
-5. Return to **Find matches** and demonstrate the new comparison.
 
 ## Files
 
